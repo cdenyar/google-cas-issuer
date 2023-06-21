@@ -47,6 +47,11 @@ type GoogleCASIssuerSpec struct {
 	// Credentials is a reference to a Kubernetes Secret Key that contains Google Service Account Credentials
 	// +optional
 	Credentials cmmetav1.SecretKeySelector `json:"credentials,omitempty"`
+
+	// CertificateTemplate is a specific certificate template to apply.
+	// Omit to not specify a certificate template
+	// +optional
+	CertificateTemplate string `json:"certificateTemplate,omitempty"`
 }
 
 // GoogleCASIssuerStatus defines the observed state of GoogleCASIssuer
